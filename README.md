@@ -55,3 +55,14 @@ temporary TeX files.
 Paper 16 is a synthetic methodological prevalidation paper.  It supports the
 plausibility of a Tau Core weak-signal strategy, not the truth of Tau Core as
 a physical theory.
+
+## Reproducibility grade
+
+The current package is result-artifact reproducible: it recomputes the frozen
+headline metrics from `data/derived/results_v10_numeric.json`, rebuilds figures,
+compiles the manuscript, builds the arXiv zip, and runs smoke tests.
+
+It is not yet a raw-generator replay package from the original random seed,
+feature matrices, covariance model, and train/held-out split.  The manuscript
+therefore treats WSAP v1.0 as a synthetic methodology demonstration and names
+raw-generator replay as a required v1.1 upgrade before stronger claims.

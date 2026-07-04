@@ -54,6 +54,11 @@ for Tau Core.  The paper's narrow claim is methodological: in a controlled
 synthetic setting, weak heterogeneous residual readouts can recover a shared
 latent parent more effectively in combination than individually, provided that
 the protocol is forward-generative, held-out, and control-specific.
+Because the channels are generated from a common synthetic parent, the result is
+not surprising as a physical discovery.  The nontrivial part is the audit
+structure: the parent is deliberately hidden behind lossy weak channels, no
+single channel is allowed to dominate, and wrong-kernel/common-mode controls
+must fail under the same scoring grammar.
 \end{abstract}
 
 \tableofcontents
@@ -87,6 +92,14 @@ sharpen a protocol: if future Tau Core real-data tests are attempted, they
 should not search only for a single large residual in one sector.  They should
 also test whether weak residuals in several sectors jointly preserve a
 source-frozen parent signature.
+
+The strongest criticism of any synthetic WSAP run is obvious and correct:
+because the channels are generated from a shared parent, recovering shared
+structure is not by itself remarkable.  The present package therefore treats the
+shared-parent recovery as necessary but insufficient.  The synthetic task is
+only meaningful if the parent is not trivially visible in any single sector, if
+wrong readout kernels fail, if common structured noise does not masquerade as
+the parent, and if held-out prediction remains positive.
 
 \section{Position in the Tau Core program}
 
@@ -206,6 +219,22 @@ implementation uses a compressed parent basis,
 \]
 and solves a ridge-regularized forward fit in stacked readout space.
 
+\subsection{What would make the synthetic test trivial?}
+
+A synthetic parent experiment would be uninformative if any of the following
+were true:
+\begin{enumerate}[leftmargin=1.4em]
+\item one channel directly encoded the parent map with high correlation;
+\item the joint score remained high after assigning sectors to wrong kernels;
+\item a smooth common-noise field produced the same apparent parent recovery;
+\item phase-scrambled or rotated parents scored comparably to the true parent;
+\item the reconstruction succeeded only on the training side and failed
+held-out prediction.
+\end{enumerate}
+The v1.0 hard-mode criteria below are designed to block exactly these trivial
+success modes.  They do not prove physical relevance; they only make the
+synthetic method non-vacuous.
+
 Figure~\ref{fig:protocol} shows the protocol structure.
 
 \begin{figure}[t]
@@ -260,6 +289,45 @@ parent information and lossy binning into void/intermediate/node-like regions.
 It is intentionally coarse, because a strong environment map would make the
 synthetic task too easy.
 
+\section{Implementation and reproducibility grade}
+
+The current repository is a reproducible paper package for the frozen WSAP v1.0
+result artifact.  It recomputes headline summary metrics from the frozen JSON
+artifact, rebuilds figures, compiles the paper, builds an arXiv source package,
+and runs smoke tests.  It is not yet a full raw-run replay package from the
+original random-number seed and feature matrices.
+
+For audit clarity, Table~\ref{tab:implementation-ledger} separates what is
+currently fixed from what a stronger v1.1 package should expose.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{L{0.26\linewidth}L{0.32\linewidth}L{0.30\linewidth}}
+\toprule
+Item & Current v1.0 package & Required for audit-grade v1.1\\
+\midrule
+Parent generator & Frozen result artifact records the recovered metrics &
+Raw parent generator, random seed, grid size, basis functions\\
+Feature extraction & Channel classes are described; final features are
+summarized by sector & Exact feature dimensions, masks, normalizations, and
+transform matrices\\
+Noise model & Target SNR and control outcomes are frozen & Explicit noise
+distribution, covariance model, and contamination amplitudes\\
+Fit rule & Ridge-regularized stacked forward fit is declared & Exact design
+matrix, ridge parameter, centering/scaling, and solver tolerance\\
+Held-out rule & Held-out correlations are frozen & Exact train/held-out split,
+split seed, and replay script from raw features\\
+Thresholds & Thresholds and margins are reported & Predeclared threshold file
+plus sensitivity sweep across nearby thresholds\\
+\bottomrule
+\end{tabular}
+\caption{Implementation ledger.  The current package is result-artifact
+reproducible, not yet raw-generator reproducible.  This is acceptable for a
+methodology note but must be upgraded before any stronger claim.}
+\label{tab:implementation-ledger}
+\end{table}
+
 \section{Pass/fail criteria}
 
 The v1.0 synthetic hard-mode criteria are:
@@ -290,6 +358,33 @@ so the candidate must survive negative controls.
 These thresholds are protocol thresholds for the synthetic audit.  They are not
 universal constants and must be redefined for any future mock-catalog or real
 data application.
+
+The threshold choices are guardrails rather than fitted constants.  The
+single-sector bound \(0.75\) rejects cases where one channel already exposes the
+parent too directly.  The joint-gain bound \(0.10\) requires a visible
+multi-channel advantage over the best single sector.  The held-out bound
+\(0.18\) requires positive out-of-sample behavior above a weak-noise floor.  The
+specificity bound \(0.30\) requires substantial separation from the principal
+controls.  Table~\ref{tab:threshold-margins} reports the margins in the frozen
+v1.0 artifact.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{L{0.33\linewidth}rrr}
+\toprule
+Criterion & Threshold & v1.0 value & Margin\\
+\midrule
+Best single-sector recovery & \(<0.75\) & 0.3606 & 0.3894 below cap\\
+Joint gain over best single & \(>0.10\) & 0.3123 & 0.2123 above floor\\
+Mean held-out noisy prediction & \(>0.18\) & 0.4110 & 0.2310 above floor\\
+Specificity score & \(>0.30\) & 0.6464 & 0.3464 above floor\\
+\bottomrule
+\end{tabular}
+\caption{Threshold rationale and v1.0 margins.  These are not universal Tau
+Core constants; they are synthetic audit guardrails.}
+\label{tab:threshold-margins}
+\end{table}
 
 \section{Negative controls}
 
@@ -475,6 +570,14 @@ failed or only partially passed because individual channels were too visible,
 kernel shuffling was too permissive, or common-mode structure leaked into the
 Tau component.  This is not a nuisance detail: it is the main reason the v1.0
 claim is methodological rather than rhetorical.
+
+The development history should be read as exploratory until v1.0.  Versions
+v0.1--v0.9 are preserved because they document how trivial success modes were
+found and blocked.  They are not independent confirmation.  The frozen v1.0
+artifact is the first package-level confirmatory target within this synthetic
+line, and even that target remains internal to the synthetic family.  A
+stronger paper would need a v1.1 raw-generator replay or an independently
+implemented mock-catalog injection test.
 
 \begin{figure}[t]
   \centering
