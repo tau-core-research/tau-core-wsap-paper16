@@ -1,0 +1,48 @@
+{
+  "version": "WSAP v1.0 numeric",
+  "verdict": "PASS",
+  "target_single_channel_snr": 0.44,
+  "single": {
+    "W / topology vector": 0.048843794801145105,
+    "L / shear-stat vector": -0.02417150597675468,
+    "R / sparse vector": 0.3192003435781466,
+    "H / coarse environment": 0.3606301580469545
+  },
+  "max_single": 0.3606301580469545,
+  "joint": 0.6729463093741658,
+  "joint_gain": 0.3123161513272113,
+  "heldout_noisy_mean": 0.4110005433002608,
+  "heldout_hidden_mean": 0.7611797712231757,
+  "specificity": 0.646416132588535,
+  "controls": {
+    "kernel_shuffle_tau_parent_corr": -0.05073884795938144,
+    "common_noise_tau_corr_with_true_parent": -0.3891652504383935,
+    "phase_scrambled_parent_corr_with_joint_tau": -0.05306035357126155,
+    "random_parent_corr_with_joint_tau": 0.09395358135211286,
+    "rotated_parent_corr_with_joint_tau": 0.07892635882971388,
+    "common_noise_tau_corr_with_common": 0.478836345449341,
+    "common_noise_nuisance_corr_with_common": 0.5842937709852605
+  },
+  "heldout": {
+    "W": {
+      "parent_train": 0.6562992989730358,
+      "noisy": 0.6390989850209507,
+      "hidden": 0.9238368971018619
+    },
+    "L": {
+      "parent_train": 0.682914225926274,
+      "noisy": 0.514278800702978,
+      "hidden": 0.883969298748781
+    },
+    "R": {
+      "parent_train": 0.3195823000364288,
+      "noisy": 0.26222813783079074,
+      "hidden": 0.683739987489952
+    },
+    "H": {
+      "parent_train": 0.5513634450350225,
+      "noisy": 0.2283962496463237,
+      "hidden": 0.5531729015521075
+    }
+  }
+}

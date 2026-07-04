@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Tau Core WSAP Paper 16: Stability-Suppressed Leakage and Cross-Readout Residual Coherence"
+message: "If you use this repository, please cite the archived release."
+type: software
+authors:
+  - family-names: "Tau Core Research"
+    given-names: "Collaboration"
+version: "0.1.0"
+date-released: "2026-07-04"
+repository-code: "https://github.com/tau-core-research/tau-core-wsap-paper16"
+license: MIT

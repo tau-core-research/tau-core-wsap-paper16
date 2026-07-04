@@ -1,0 +1,31 @@
+metric,channel_or_control,value
+target_single_channel_snr,ALL,0.44
+single_sector_parent_recovery,W / topology vector,0.048843794801145105
+single_sector_parent_recovery,L / shear-stat vector,-0.02417150597675468
+single_sector_parent_recovery,R / sparse vector,0.3192003435781466
+single_sector_parent_recovery,H / coarse environment,0.3606301580469545
+max_single_sector_parent_corr,ALL,0.3606301580469545
+joint_tau_parent_recovery_corr,ALL,0.6729463093741658
+joint_gain_over_best_single,ALL,0.3123161513272113
+mean_heldout_noisy_corr,ALL,0.4110005433002608
+mean_heldout_hidden_signal_corr,ALL,0.7611797712231757
+specificity_score,ALL,0.646416132588535
+negative_control,kernel_shuffle_tau_parent_corr,-0.05073884795938144
+negative_control,common_noise_tau_corr_with_true_parent,-0.3891652504383935
+negative_control,phase_scrambled_parent_corr_with_joint_tau,-0.05306035357126155
+negative_control,random_parent_corr_with_joint_tau,0.09395358135211286
+negative_control,rotated_parent_corr_with_joint_tau,0.07892635882971388
+negative_control,common_noise_tau_corr_with_common,0.478836345449341
+negative_control,common_noise_nuisance_corr_with_common,0.5842937709852605
+heldout_parent_train,W,0.6562992989730358
+heldout_noisy,W,0.6390989850209507
+heldout_hidden,W,0.9238368971018619
+heldout_parent_train,L,0.682914225926274
+heldout_noisy,L,0.514278800702978
+heldout_hidden,L,0.883969298748781
+heldout_parent_train,R,0.3195823000364288
+heldout_noisy,R,0.26222813783079074
+heldout_hidden,R,0.683739987489952
+heldout_parent_train,H,0.5513634450350225
+heldout_noisy,H,0.2283962496463237
+heldout_hidden,H,0.5531729015521075

@@ -1,0 +1,13 @@
+metric,value
+version,WSAP v1.0 numeric
+max_single,0.3606301580469545
+joint,0.6729463093741658
+joint_gain,0.3123161513272113
+heldout_noisy_mean,0.4110005433002608
+heldout_hidden_mean,0.7611797712231757
+specificity,0.646416132588535
+verdict,PASS
+pass_single_suppression,True
+pass_joint_gain,True
+pass_heldout_noisy,True
+pass_specificity,True

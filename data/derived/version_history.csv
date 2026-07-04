@@ -1,0 +1,11 @@
+version,verdict,lesson
+v0.1,PARTIAL PASS,"First synthetic stability-suppressed leakage test. Weak channels could be combined, but kernel-shuffle remained too permissive."
+v0.2,PARTIAL PASS,"More distinct sector kernels. Kernel-shuffle held-out weakened, but shuffled parent recovery was still high."
+v0.3,FAIL_OR_WEAK / hard test,Heterogeneous readout views showed simple backprojection averaging is insufficient.
+v0.4,PARTIAL PASS,"Forward-generative compressed parent fitting improved specificity, but common-mode structured noise remained dangerous."
+v0.5,FAIL_OR_WEAK,"Tau/nuisance split helped shuffle/random controls, but common-mode could still produce Tau-like components."
+v0.6,PARTIAL PASS,Negative-control specificity reduced common-noise and shuffle; single-sector visibility remained high.
+v0.7,PARTIAL PASS,Hard mode with lower SNR and lossy channels; W/cosmic-web still too parent-visible.
+v0.8,PARTIAL PASS,W converted to topology/statistics vector; single-sector suppression improved but joint gain too small.
+v0.9,PARTIAL PASS,"Controls excellent, but L/lensing-like full map remained too informative."
+v1.0 numeric,PASS,W and L vectorized; R sparse vector; H coarse environment. Single-sector suppressed and joint gain > 0.10.
