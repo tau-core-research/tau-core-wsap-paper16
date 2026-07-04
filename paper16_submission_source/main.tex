@@ -651,6 +651,14 @@ empty as a signal-processing architecture.  It shows that weak residual
 channels can, in principle, be designed so that the correct joint kernel
 outperforms single-sector and wrong-kernel alternatives.
 
+Paper 17 adds a stricter downstream classifier for this situation.  It reports
+shared-parent covariance support \(Z_{\rm shared}\) separately from
+morphology/orientation support \(Z_{\rm orient}\).  In that classifier,
+orientation-only structure is a control or warning class rather than evidence
+by itself.  A future WSAP endpoint should therefore avoid counting visually
+aligned or morphology-like residual structure as parent recovery unless the
+shared-parent covariance axis also survives.
+
 \begin{table}[t]
 \centering
 \small

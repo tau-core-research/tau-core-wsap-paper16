@@ -78,3 +78,9 @@ The required v1.1 upgrade is:
   and known parent/control components;
 - independent implementation of the same frozen protocol to check whether the
   same pattern appears without sharing the original analysis code.
+
+Paper 17 supplies a stricter downstream classifier for WSAP-like work:
+shared-parent covariance support (`Z_shared`) must be reported separately from
+morphology/orientation support (`Z_orient`).  Orientation-only structure is not
+Tau Core evidence by itself, even when it looks visually or morphologically
+suggestive.
