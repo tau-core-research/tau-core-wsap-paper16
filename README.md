@@ -66,3 +66,15 @@ It is not yet a raw-generator replay package from the original random seed,
 feature matrices, covariance model, and train/held-out split.  The manuscript
 therefore treats WSAP v1.0 as a synthetic methodology demonstration and names
 raw-generator replay as a required v1.1 upgrade before stronger claims.
+
+The required v1.1 upgrade is:
+
+- raw-generator replay from seed, parent generator, feature matrix, noise
+  model, covariance rule, ridge parameter, solver tolerance, and train/held-out
+  split;
+- sensitivity sweeps over thresholds, ridge `lambda`, SNR, feature dimensions,
+  and held-out split stability;
+- mock-catalog injection with realistic covariance, masks, selection effects,
+  and known parent/control components;
+- independent implementation of the same frozen protocol to check whether the
+  same pattern appears without sharing the original analysis code.

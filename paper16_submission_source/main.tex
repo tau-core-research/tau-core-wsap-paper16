@@ -320,6 +320,12 @@ Held-out rule & Held-out correlations are frozen & Exact train/held-out split,
 split seed, and replay script from raw features\\
 Thresholds & Thresholds and margins are reported & Predeclared threshold file
 plus sensitivity sweep across nearby thresholds\\
+Stress grid & Not part of the v1.0 result artifact & Sweep thresholds, ridge
+\(\lambda\), SNR, feature dimensions, and held-out split stability\\
+Mock injection & Not included & Realistic mock-catalog injection with known
+parent and control components\\
+Independent replay & Not included & Separate implementation from the frozen
+protocol, not shared analysis code\\
 \bottomrule
 \end{tabular}
 \caption{Implementation ledger.  The current package is result-artifact
@@ -576,8 +582,8 @@ v0.1--v0.9 are preserved because they document how trivial success modes were
 found and blocked.  They are not independent confirmation.  The frozen v1.0
 artifact is the first package-level confirmatory target within this synthetic
 line, and even that target remains internal to the synthetic family.  A
-stronger paper would need a v1.1 raw-generator replay or an independently
-implemented mock-catalog injection test.
+stronger paper would need a v1.1 raw-generator replay, sensitivity sweep,
+mock-catalog injection test, and independent reimplementation.
 
 \begin{figure}[t]
   \centering
@@ -715,12 +721,21 @@ A real-data WSAP program would require much more than the present paper.
 The roadmap is:
 
 \begin{enumerate}[leftmargin=1.4em]
+\item Build a v1.1 raw-generator replay: random seed, parent generator, feature
+matrix, noise model, covariance rule, train/held-out split, ridge
+\(\lambda\), and solver tolerance must regenerate the result from raw
+synthetic ingredients.
 \item Freeze the protocol before endpoint scoring: sector definitions, feature
 extraction, thresholds, controls, and held-out scheme.
+\item Run sensitivity sweeps over thresholds, ridge \(\lambda\), SNR,
+feature dimensions, and held-out split stability without selecting the best
+score after the fact.
 \item Run mock-catalog injection with realistic covariance, masks, and
 selection effects.
 \item Use semi-real public simulations to test whether injected parent-like
 signals can be separated from baryonic, environmental, and survey systematics.
+\item Require an independent implementation that rebuilds the protocol from the
+frozen specification.
 \item Only then attempt a blind real-data pilot.
 \item Require independent replication on a second dataset or survey region.
 \end{enumerate}
