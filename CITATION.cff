@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Tau Core Research"
     given-names: "Collaboration"
-version: "0.1.0"
-date-released: "2026-07-04"
+version: "v0.1.0"
+date-released: "2026-08-22"
 repository-code: "https://github.com/tau-core-research/tau-core-wsap-paper16"
 license: MIT
