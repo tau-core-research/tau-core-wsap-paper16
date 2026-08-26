@@ -23,7 +23,7 @@
 \title{\textbf{Stability-Suppressed Leakage and Cross-Readout Residual Coherence}\\
 \large A Synthetic Weak-Signal Amplification Protocol for Tau Core}
 \author{Tau Core Research}
-\date{Paper 16 draft package, 2026\\Last revised: 2026-08-22}
+\date{Paper 16 draft package, 2026\\Last revised: 2026-08-26}
 
 \begin{document}
 \maketitle
@@ -641,6 +641,15 @@ becomes more interesting when independent readout sectors preserve a shared
 source-frozen signature, and less interesting when the effect is dominated by
 one channel, a wrong kernel, or common-mode noise.
 
+The foundation-level common-ancestor result sharpens this interpretation.  If
+the weak channels are physical descendants of one descriptor \(\Xi_{OS}\),
+then every admitted channel must be constant on its fibres; the joint stack
+recovers the full local descriptor only when its Jacobian kernel equals
+\(\ker D\Xi_{OS}\).  WSAP assumes a shared latent source in its synthetic
+generator but does not prove either physical factorization or this kernel
+equality.  Its positive result is therefore a method witness, not a
+common-ancestor theorem.
+
 \section{Relation to earlier Tau Core readout papers}
 
 The role of this paper is different from the galaxy and cosmology endpoint
@@ -833,6 +842,22 @@ The repository intentionally does not include private workbench logs or broad
 exploration dumps.  Negative and partial results are preserved in the version
 history, while the public package remains compact enough for independent
 inspection.
+
+\section{Relation to the full-4D fixed score}
+
+The synthetic WSAP specificity score tests protocol recovery and wrong-family
+separation.  It is not the later physical full-4D score.  That score requires
+a source-frozen tensor
+\[
+ E_g={1\over\mathcal A_*}(A_O^{(4)-1})^*
+ \left[(K_{HH}-K_{\rm std})-CK_{VV}^{-1}C^\dagger\right]
+ A_O^{(4)-1}
+\]
+and the stacked prediction $\mu_\tau=\bigoplus_a\mathcal T_a[E_g]$, with exact
+duplicates removed and genuine terminal overlap retained through the full
+covariance.  The present synthetic package establishes neither physical
+occupation nor a nonzero $E_g$; its reported specificity values therefore
+remain synthetic diagnostics and are not recomputed.
 
 \section{Conclusion}
 

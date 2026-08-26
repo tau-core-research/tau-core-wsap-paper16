@@ -29,6 +29,13 @@ This repository does **not** claim that:
 Only compact synthetic derived artifacts are included under `data/derived/`.
 No private workbench logs or raw external data are required.
 
+## Full-4D Score Boundary
+
+The WSAP specificity score is synthetic. The later physical compiler requires
+one source-frozen `E_K = (K_HH - K_std) - C K_VV^-1 C^dagger`, its common
+coframe push, exact duplicate quotienting, and full terminal covariance. The
+reported synthetic values are unchanged.
+
 ## Reproduce
 
 ```bash
