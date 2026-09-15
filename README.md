@@ -91,3 +91,14 @@ shared-parent covariance support (`Z_shared`) must be reported separately from
 morphology/orientation support (`Z_orient`).  Orientation-only structure is not
 Tau Core evidence by itself, even when it looks visually or morphologically
 suggestive.
+
+<!-- BEGIN OBSERVER UPDATE 20260914 -->
+## Observer realization update (2026-09-14)
+
+Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
+
+The manuscript distinguishes inherited BRAC contact, conditional coherent-state
+selection and interacting local covariance from physical observer identification,
+preparation and stable resolution. Those physical claims remain open. No
+empirical score was changed. The [dependency and source-result ledger](data/derived/observer_update_2026_09_14.json) records the assumptions and controls.
+<!-- END OBSERVER UPDATE 20260914 -->
