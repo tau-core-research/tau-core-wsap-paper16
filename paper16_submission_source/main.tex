@@ -61,8 +61,6 @@ single channel is allowed to dominate, and wrong-kernel/common-mode controls
 must fail under the same scoring grammar.
 \end{abstract}
 
-\tableofcontents
-
 \section{Scope and claim boundary}
 
 This manuscript should be evaluated as a synthetic methodology and
@@ -261,7 +259,7 @@ The final v1.0 protocol uses four sectors.  These sectors are deliberately
 synthetic analogues.  They are not survey products and should not be read as
 actual cosmic-web, lensing, rotation, or Hubble analyses.
 
-\subsection{\(W\): topology/statistics vector}
+\subsection{\texorpdfstring{\(W\)}{W}: topology/statistics vector}
 
 Earlier WSAP runs used \(W\) too close to a morphology map.  That made the
 single-sector channel overly informative.  In v1.0, \(W\) is a topology and
@@ -270,7 +268,7 @@ occupancy, curvature summaries, anisotropy summaries, and block moments.  The
 goal is to preserve weak structural information while suppressing direct
 spatial reconstruction.
 
-\subsection{\(L\): shear-statistics vector}
+\subsection{\texorpdfstring{\(L\)}{L}: shear-statistics vector}
 
 The \(L\) channel is a lensing-like shear-statistics vector.  Earlier runs used
 too much map-like information.  In v1.0, \(L\) uses percentile summaries,
@@ -278,7 +276,7 @@ gradient percentiles, coarse strip summaries, and orientation-sensitive but
 lossy information.  It is meant to be informative only in combination with
 other sectors.
 
-\subsection{\(R\): sparse galaxy-vector channel}
+\subsection{\texorpdfstring{\(R\)}{R}: sparse galaxy-vector channel}
 
 The \(R\) channel is sparse and point-sampled.  It uses galaxy-like sample
 positions and vector residuals of the schematic form
@@ -290,7 +288,7 @@ positions and vector residuals of the schematic form
 The point is not to model galaxy rotation curves.  The point is to test a
 readout whose sampling is sparse and local.
 
-\subsection{\(H\): coarse environment channel}
+\subsection{\texorpdfstring{\(H\)}{H}: coarse environment channel}
 
 The \(H\) channel is a coarse environment-like readout.  It uses smoothed
 parent information and lossy binning into void/intermediate/node-like regions.
@@ -849,7 +847,7 @@ The synthetic WSAP specificity score tests protocol recovery and wrong-family
 separation.  It is not the later physical full-4D score.  That score requires
 a source-frozen tensor
 \[
- E_g={1\over\mathcal A_*}(A_O^{(4)-1})^*
+ E_g=\frac{1}{\mathcal A_*}(A_O^{(4)-1})^*
  \left[(K_{HH}-K_{\rm std})-CK_{VV}^{-1}C^\dagger\right]
  A_O^{(4)-1}
 \]
@@ -859,83 +857,40 @@ covariance.  The present synthetic package establishes neither physical
 occupation nor a nonzero $E_g$; its reported specificity values therefore
 remain synthetic diagnostics and are not recomputed.
 
-% BEGIN OBSERVER UPDATE 20260914
-\section{Observer realization: inherited results and physical boundary}
-\label{sec:observer-update-20260914}
-The current observer programme distinguishes a conditional mathematical
-construction from an occupied physical measuring system. The source order
-remains base plus one universal seed, stabilized morphological response,
-observer--source restriction, shared descriptor, and resolved terminal
-readouts. Neither a detector nor an empirical residual constructs the parent
-body backwards. Dynamics below concern downstream subsystems only.
+\section{Upstream Ownership, Inherited Results, and Scope Boundary}
+\label{sec:upstream-ownership}
 
-The canonical observer-origin derivation, Sections 22--26, owns the following
-results. The existing joint source action fixes static and frequency-dependent
-response together. Variation of the BRAC potential couples to the field
-square; a linear field coupling is a distinct comparator unless derived by
-expansion about an occupied background. Fixed canonical means select a unique
-coherent state in a finite positive harmonic packet only if there is no excess
-fluctuation energy. This is a free/asymptotic preparation statement, not the
-ground state of an interacting detector. For the existing coupled harmonic
-pair, the joint ground is pure but either local subsystem is mixed, with its
-covariance fixed by the complete joint Hamiltonian.
-
-These are conditional derivations and internal numerical checks. The actual
-observer--source context, physical preparation process, kinetic/energy
-calibration and stable operational resolution remain unproved. The existing
-ORA-T1 selector conditionally chooses stable quantizers when the occupied
-context, admissible partition family and positive closure barrier are supplied;
-it does not establish those physical premises. A computed ground state is not
-a preparation mechanism, and a covariance or optimal abstract measurement is
-not an implemented stable quantizer $Q_{OS}$.
-
-\paragraph{Ownership and use.}
-The central observer-origin note owns the new contact, state and covariance
-derivations; the body-readout technical companion carries the consolidated
-mathematics. Foundation Papers IV, V and VI retain physical-selection,
-clock-descent and quantum-readout ownership, respectively. This paper imports
-only the consequences within its scope. No observational dataset, baseline,
-frozen coefficient, score or empirical conclusion is revised by this update.
-The reproducibility supplement records the source hashes and the exact
-conditional/physical distinction.
-
-
-\paragraph{Consequence for this paper.}
-Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
-% END OBSERVER UPDATE 20260914
-
-% BEGIN STATE UPDATE 20260918
-\section{Source identification and recovery}
-The current observer audit separates a conditional forward construction from physical source selection. A frozen body, occupied observer incidence, preparation, complete instrument and stable resolution can determine records without selecting those inputs from Nature. Equal effects do not fix postmeasurement states, and symmetry within a chosen interaction family does not exclude other symmetric couplings. Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
-
-\paragraph{Dependency and claim ownership.}
-Foundation VI and the body--readout technical companion own the finite instrument/access proof; Foundation IV and TD-0 retain physical source selection; Foundation V, the temporal synthesis and seed--body companion own the gradient/inertial distinction. This paper inherits only the stated specialization. Canonical assumptions, countermodels and calibration audits are in \url{https://github.com/tau-core-research/tau-core-theory/blob/main/docs/tau_rqm_instrument_to_record_bridge_001.md}. No physical seed, Nature occupation or Tau-exclusive observation is established by this update. Existing empirical endpoint definitions and scores are unchanged.
-% END STATE UPDATE 20260918
-
-% BEGIN PAIR READOUT UPDATE 20260927
-\section{Conditional source preparation and time-resolved access}
-The common-operator scalar--Dirac completion now supports an explicit
-conditional chain from interaction vertices to pair transfer and joint
-readout. Nonzero vertices do not select occupation. Relational coherence
-can be generated from an occupied number-diagonal pair even while both
-local mean fields vanish. In a declared resonant rotating-wave and Markov
-loss model, finite-window emission retains this coherence information,
-whereas an all-time count discards it. This is standard-compatible quantum
-recovery, not a Tau-specific observational residual.
-Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
-\paragraph{Dependency ownership and limits.}
-The P4 common-source assembly owns the scalar/Yukawa benchmark and finite
-preparation calculations; Foundation VI and the body--readout companion
-inherit the joint-access mathematics. Foundation IV and TD-0 retain
-physical source selection, and Foundation V retains clock descent.
-The parent remains atemporal: the evolution above is a conditional
-downstream 4D model, not parent memory or a derived morphogenetic time.
-Physical initial occupation, a gauge-complete realization, detector
-amplification, absolute calibration and stable observer-relative $Q_{OS}$
-remain unselected. No empirical endpoint or score is changed.
-The canonical derivation and reproducible numerical sources are linked at
-\url{https://github.com/tau-core-research/tau-core-theory/blob/main/docs/tau_core_p4_nonabelian_particle_common_source_assembly_001.md}.
-% END PAIR READOUT UPDATE 20260927
+Within the broader Tau Core programme---Foundation Papers~I and~III for base
+morphology and complete record edges, Foundation Paper~IV and TD-0 for physical
+parent/source selection, Foundation Paper~V and the seed--body/temporal
+companions for gradient--inertial clock descent, and Foundation Paper~VI
+(Paper~VII-A) with the body--readout companion for finite instrument/access
+reductions and the conditional \texttt{ORA-T1} quantizer selector---this
+manuscript owns only the synthetic WSAP v1.0 weak-signal amplification
+protocol. Upstream conditional results are inherited strictly by reference:
+\begin{itemize}
+\item \textbf{Observer--source contact and local covariance} (Observer-Origin
+Sections~22--26;
+\href{https://github.com/tau-core-research/tau-core-theory/blob/main/docs/tau_rqm_instrument_to_record_bridge_001.md}{instrument-to-record bridge audit}):
+BRAC potential variation couples to the field square, fixed canonical means
+select a unique harmonic coherent state only at zero excess fluctuation energy,
+and a pure coupled harmonic ground state induces mixed local marginals fixed by
+the joint Hamiltonian; equal measurement effects do not uniquely fix
+postmeasurement states.
+\item \textbf{Conditional pair preparation and time-resolved access}
+(\href{https://github.com/tau-core-research/tau-core-higgs-module-paper4/blob/main/paper4_full_derivation/full_derivation.pdf#nameddest=cpr1}{Paper~4 / Paper~V, \emph{Full Derivation Ledger for the Branch A Higgs Module}},
+section ``Conditional source preparation and time-resolved access'', Theorem
+CPR1(b,c), v1.0 (2026-09-28)): access-specific null directions must not be
+identified with nulls of the complete channel, and the imported finite-sector
+example does not establish independent terminal information or photon/lensing
+recovery.
+\end{itemize}
+Different terminal labels do not constitute independent information sources
+without a factorization or novelty proof, and a nonzero cross-channel
+correlation is not automatically a standard-orthogonal Tau signal. Physical
+source occupation, preparation, detector/clock calibration, and an implemented
+operational quantizer $Q_{OS}$ remain open; all frozen synthetic WSAP v1.0
+definitions and scores in this paper remain unchanged.
 
 \section{Conclusion}
 
