@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: "Tau Core Research"
     given-names: "Collaboration"
+    orcid: "https://orcid.org/0009-0003-7311-6522"
 version: "v0.1.0"
 date-released: "2026-08-22"
 repository-code: "https://github.com/tau-core-research/tau-core-wsap-paper16"
